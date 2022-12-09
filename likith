@@ -1,0 +1,28 @@
+// continated string without using strcat predifined function
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main()
+{
+    int i,l,l1,p;
+    char s[200],s1[200];
+    printf("enter the string sequence\n");
+    gets(s);
+    l = strlen(s);
+    printf("the length of the string one is %d\n",l);
+    printf("enter the second string sequence to concatinate with above string \n");
+    gets(s1);
+    l1=strlen(s1);
+    printf("the length of the string two is %d\n",l1);
+    p=l+l1;
+    printf("the length of the both string is %d\n",p);
+    for(i=0;i<p;i++)
+    {
+        if (s1!='\0')
+        {
+        s[l++] = s1[i];
+        }
+    }
+    printf("the concatinated string is %s",s);
+}
